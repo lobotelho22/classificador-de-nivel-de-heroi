@@ -1,0 +1,21 @@
+{
+  "name": "01-classificador-de-nivel-de-heroi",
+  "version": "1.0.0",
+  "description": "Projeto integrante do curso Introdução à Lógica de Programação, da DIO",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "nodeJS",
+    "Javascript",
+    "Lógica-de-programação"
+  ],
+  "author": "Carlos Eduardo Botelho Santos",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
