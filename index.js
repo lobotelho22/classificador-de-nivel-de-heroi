@@ -1,13 +1,45 @@
-const { question, questionInt } = require('readline-sync');
-const { obterNivel } = require('./src/obterNivel');
+const readlineSync = require('readline-sync');
+const Table = require('cli-table3');
+const { CLASSIFICADOR, CALCULADORA } = require('./src/globals');
+const { classificador } = require('./functions/classificador-de-nivel');
+const { calculadoraDePartidas } = require('./functions/calculadora-de-partidas');
 
 function main() {
-    const nomeHeroi = question('Digite o nome do herói: ');
-    const heroiXP = questionInt('Informe a experiência do herói: ');
+    const menuSelect = new Table({
+        head: ['Opção', 'Projeto'],
+        colWidths: [10, 50],
+        colAligns: ["center", "center"],
+    })
 
-    let nivelHeroi = obterNivel(heroiXP);
+    menuSelect.push(
+        [1, CLASSIFICADOR.nome],
+        [2, CALCULADORA.nome]
+    )
 
-    console.log(`O Herói de nome ${nomeHeroi} está no nível de ${nivelHeroi}`);
+    console.log(menuSelect.toString());
+
+    readlineSync.setDefaultOptions({
+        limit: [1, 2],
+        limitMessage: "Selecione uma das opções válidas"
+    })
+
+    const selecionaOpcao = readlineSync.question("Selecione uma opção: ");
+    const opcaoSelecionada = Number.parseInt(selecionaOpcao);
+    
+    readlineSync.setDefaultOptions({ limit: null })
+
+    switch (opcaoSelecionada) {
+        case 1:
+            classificador();
+            break;
+    
+        case 2:
+            calculadoraDePartidas();
+            break;
+    
+        default:
+            break;
+    }
 }
 
-main();
+main ();

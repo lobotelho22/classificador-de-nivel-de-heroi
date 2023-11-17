@@ -1,18 +1,36 @@
-# Classificador de Nível de Herói
+# Projetos do Curso de Introdução a Lógica de Programação
 
-Repositório de entrega do desafio **Classificador de Nível de Herói**, o primeiro projeto a ser entregue do curso de *Introdução a Lógica de Programação*, da Dio.
+O presente repositório contém os projetos desenvolvidos no decorrer do curso de *Introdução à Lógica de Programação*, da Dio. Para melhor controlar o acesso ao conteúdo, desenvolvi um menu com as opções para acesso aos testes dos projetos. Utilizei para isso o pacote [CLI-table3][2].
 
-Para criar um script funcional em NodeJS, utilizei a dependência [Readline-Sync][1] e organizei uma pasta de recursos, contendo a função obter nível, que relaciona o *XP* do herói a seu nível, e as constantes de uso global.
+Além dele, para permitir as interações do usuário, através de inputs pela linha de comando do terminal, instalei a depenência [Readline-Sync][1].
 
-Para excução do script, com o NodeJS instalado em seu sistema, basta digitar em seu terminal as seguintes instruções:
+Ambos os serviços são simples de usar, mas proporcionaram o teste dos scripts escritos, com a interação do usuário.
+
+Para que seja possível o teste, é necessário, primeiro instalar as dependências do projeto, pelo comando:
 
 ``` bash
 npm install
+```
+
+O próximo passo é executar nossa aplicação:
+
+```bash
 npm start
 ```
 
-Boa diversão!
+Prosseguiremos agora com as desecrições dos projetos.
+
+## 1 - Classificador de Nível de Herói
+
+Ao selecionar a opção 01, executamos o script do desafio **Classificador de Nível de Herói**, o primeiro projeto a ser entregue do curso de *Introdução a Lógica de Programação*, da Dio.
+
+Este script pede que o usuário informe o *nome do personagem* e seus *pontos de experiência*. Então, uma função fará a relação entre a experiência do personagem e seu nivelamento atual.
+
+## 2 - Calculadora de Partidas Rankeadas
+
+Ao executarmos a opção 02, executamos o script de nosso segundo projeto, intitulado **Calculadora de Partidas Rankeadas**. Esse script solicitará ao usuário as informações de números de vitórias e derrotas do seu personagem. A partir dessas informações, o script retornará a informação do rankeamento atual do personagem.
 
 <!-- LINKS -->
 
 [1]: https://www.npmjs.com/package/readline-sync
+[2]: https://www.npmjs.com/package/cli-table3
