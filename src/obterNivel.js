@@ -12,7 +12,7 @@ function revelaRanking (XpHeroi) {
         return NIVEIS[3]
     } else if (XpHeroi < 90) {
         return NIVEIS[8]
-    } if (XpHeroi < 100) {
+    } else if (XpHeroi < 100) {
         return NIVEIS[9]
     }
 

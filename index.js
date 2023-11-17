@@ -1,8 +1,9 @@
 const readlineSync = require('readline-sync');
 const Table = require('cli-table3');
-const { CLASSIFICADOR, CALCULADORA } = require('./src/globals');
+const { CLASSIFICADOR, CALCULADORA, CRIA_HEROI } = require('./src/globals');
 const { classificador } = require('./functions/classificador-de-nivel');
 const { calculadoraDePartidas } = require('./functions/calculadora-de-partidas');
+const { criarHeroi } = require('./functions/classes-do-jogo');
 
 function main() {
     const menuSelect = new Table({
@@ -13,13 +14,14 @@ function main() {
 
     menuSelect.push(
         [1, CLASSIFICADOR.nome],
-        [2, CALCULADORA.nome]
+        [2, CALCULADORA.nome],
+        [3, CRIA_HEROI.nome]
     )
 
     console.log(menuSelect.toString());
 
     readlineSync.setDefaultOptions({
-        limit: [1, 2],
+        limit: [1, 2, 3],
         limitMessage: "Selecione uma das opções válidas"
     })
 
@@ -36,7 +38,11 @@ function main() {
         case 2:
             calculadoraDePartidas();
             break;
-    
+        
+        case 3:
+            criarHeroi();
+            break;
+        
         default:
             break;
     }
