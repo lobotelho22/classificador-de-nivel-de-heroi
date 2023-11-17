@@ -9,7 +9,7 @@ function calculadoraDePartidas() {
 
     const nivel = obterNivel(saldo, "ranking");
     
-    console.log(`O Herói tem saldo ${ saldo } e está no nível ${ nivel }`)
+    console.log(`O Herói tem saldo ${ saldo } e está no nível ${ nivel }`);
 }
 
 module.exports = {

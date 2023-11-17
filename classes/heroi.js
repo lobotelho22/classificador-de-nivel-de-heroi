@@ -8,7 +8,7 @@ class Heroi {
         this.tipo = tipo.toLowerCase();
     }
     atacar() {
-        console.log(`o ${this.tipo} atacou usando ${ARMA[this.tipo]}`)
+        console.log(`o ${this.tipo} atacou usando ${ARMA[this.tipo]}`);
     }
 }
 
