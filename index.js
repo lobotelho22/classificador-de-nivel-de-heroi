@@ -1,7 +1,8 @@
 const readlineSync = require('readline-sync');
 const Table = require('cli-table3');
-const { CLASSIFICADOR } = require('./src/globals');
+const { CLASSIFICADOR, CALCULADORA } = require('./src/globals');
 const { classificador } = require('./functions/classificador-de-nivel');
+const { calculadoraDePartidas } = require('./functions/calculadora-de-partidas');
 
 function main() {
     const menuSelect = new Table({
@@ -11,7 +12,8 @@ function main() {
     })
 
     menuSelect.push(
-        [1, CLASSIFICADOR.nome]
+        [1, CLASSIFICADOR.nome],
+        [2, CALCULADORA.nome]
     )
 
     console.log(menuSelect.toString());
@@ -23,11 +25,16 @@ function main() {
 
     const selecionaOpcao = readlineSync.question("Selecione uma opção: ");
     const opcaoSelecionada = Number.parseInt(selecionaOpcao);
+    
+    readlineSync.setDefaultOptions({ limit: null })
 
     switch (opcaoSelecionada) {
         case 1:
-            readlineSync.setDefaultOptions({ limit: null })
             classificador();
+            break;
+    
+        case 2:
+            calculadoraDePartidas();
             break;
     
         default:
