@@ -3,20 +3,20 @@ const { NIVEIS } = require('./globals');
 function revelaRanking (XpHeroi) {
 
     if (XpHeroi < 10) {
-        return NIVEIS[0]
+        return NIVEIS[0];
     } else if (XpHeroi < 20) {
-        return NIVEIS[1]
+        return NIVEIS[1];
     } else if (XpHeroi < 50) {
-        return NIVEIS[2]
+        return NIVEIS[2];
     } else if (XpHeroi < 80) {
-        return NIVEIS[3]
+        return NIVEIS[3];
     } else if (XpHeroi < 90) {
-        return NIVEIS[8]
-    } if (XpHeroi < 100) {
-        return NIVEIS[9]
+        return NIVEIS[8];
+    } else if (XpHeroi < 100) {
+        return NIVEIS[9];
     }
 
-    return NIVEIS[6]
+    return NIVEIS[6];
 }
 
 function revelaNivel(XpHeroi) {
@@ -36,7 +36,7 @@ function revelaNivel(XpHeroi) {
         return NIVEIS[6];
     }
 
-    return NIVEIS[7]
+    return NIVEIS[7];
 }
 
 function obterNivel(XpHeroi, label) {

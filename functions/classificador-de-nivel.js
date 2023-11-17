@@ -10,8 +10,6 @@ function classificador() {
     console.log(`O Herói de nome ${nomeHeroi} está no nível de ${nivelHeroi}`);
 }
 
-// classificador();
-
 module.exports = {
     classificador
 }
