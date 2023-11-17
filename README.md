@@ -30,6 +30,12 @@ Este script pede que o usuário informe o *nome do personagem* e seus *pontos de
 
 Ao executarmos a opção 02, executamos o script de nosso segundo projeto, intitulado **Calculadora de Partidas Rankeadas**. Esse script solicitará ao usuário as informações de números de vitórias e derrotas do seu personagem. A partir dessas informações, o script retornará a informação do rankeamento atual do personagem.
 
+## 3 - Escrevendo as classes de um Jogo
+
+Nesse projeto, criamos uma classe genérica que representa um herói de uma aventura, com as propriedades: *nome*, *idade* e *tipo*, e também o método *atacar*.
+
+O usuário insere os dados da propriedade através da CLI e o script chama o método de ataque, exibindo uma mensagem de retorno.
+
 <!-- LINKS -->
 
 [1]: https://www.npmjs.com/package/readline-sync
